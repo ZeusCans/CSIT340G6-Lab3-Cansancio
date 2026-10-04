@@ -2,12 +2,16 @@ const Header = (props) => {
   return <h1>{props.course}</h1>
 }
 
+const Part = (props) => {
+  return <p>{props.name} - {props.units} units</p>
+}
+
 const Content = (props) => {
   return (
     <div>
-      <p>{props.part1} - {props.units1} units</p>
-      <p>{props.part2} - {props.units2} units</p>
-      <p>{props.part3} - {props.units3} units</p>
+      <Part name={props.part1} units={props.units1} />
+      <Part name={props.part2} units={props.units2} />
+      <Part name={props.part3} units={props.units3} />
     </div>
   )
 }
