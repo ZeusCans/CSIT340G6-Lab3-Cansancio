@@ -33,29 +33,33 @@ const Footer = (props) => {
 }
 
 const App = () => {
-  const course = 'CSIT340 - Industry Elective 1'
-  const parts = [
-    {
-      name: 'CSIT327 - Information Management 2',
-      units: 3
-    },
-    {
-      name: 'IT317 - Project Management',
-      units: 3
-    },
-    {
-      name: 'IT365 - Data Analytics 1',
-      units: 3
-    }
-  ]
+  const course = {
+    name: 'CSIT340 - Industry Elective 1',
+    parts: [
+      {
+        name: 'CSIT327 - Information Management 2',
+        units: 3
+      },
+      {
+        name: 'IT317 - Project Management',
+        units: 3
+      },
+      {
+        name: 'IT365 - Data Analytics 1',
+        units: 3
+      }
+    ]
+  }
 
   return (
     <div>
-      <Header course={course} />
-      <Content parts={parts} />
-      <Total parts={parts} />
+      <Header course={course.name} />
+      <Content parts={course.parts} />
+      <Total parts={course.parts} />
       <Footer name="Ralph Miguel Sabellano" code="CSIT340" section="G7" />
     </div>
   )
 }
+
+
 export default App
